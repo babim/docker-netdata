@@ -1,8 +1,5 @@
 FROM babim/alpinebase
 
-# make data
-RUN mkdir /data && ln -sf /data /usr/libexec/netdata
-
 # install
 RUN apk add --no-cache alpine-sdk bash curl zlib-dev util-linux-dev libmnl-dev gcc make git autoconf automake pkgconfig python logrotate && \
     apk add --no-cache nodejs ssmtp && \
@@ -22,6 +19,9 @@ WORKDIR /
 
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
+
+# make data
+RUN mv /usr/libexec/netdata /usr/libexec/netdata_start && mkdir /data && ln -sf /data /usr/libexec/netdata
 
 ENV NETDATA_PORT=19999 SSMTP_TLS=YES SSMTP_SERVER=smtp.gmail.com SSMTP_PORT=587 SSMTP_HOSTNAME=localhost
 EXPOSE $NETDATA_PORT
