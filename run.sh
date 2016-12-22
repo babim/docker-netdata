@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# make data
+if [ -z "`ls /usr/libexec/netdata`" ]; then cp -R /usr/libexec/netdata_start/* /usr/libexec/netdata; fi
+
 # fix permissions due to netdata running as root
 chown root:root /usr/share/netdata/web/ -R
 echo -n "" > /usr/share/netdata/web/version.txt
