@@ -1,3 +1,6 @@
+[![](https://images.microbadger.com/badges/image/babim/netdata.svg)](https://microbadger.com/images/babim/netdata "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/babim/netdata.svg)](https://microbadger.com/images/babim/netdata "Get your own version badge on microbadger.com")
+
 # docker-netdata
 thanks titpetric
 netdata monitoring tool on Alpine Linux
