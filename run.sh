@@ -40,5 +40,8 @@ if [[ -d "/fakenet/" ]]; then
 	sleep 1
 fi
 
+# option with entrypoint
+if [ -f "/option.sh" ]; then /option.sh; fi
+
 # main entrypoint
 exec /usr/sbin/netdata -D -u root -s /host -p ${NETDATA_PORT}
