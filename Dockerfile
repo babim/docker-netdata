@@ -11,7 +11,7 @@ RUN wget --no-check-certificate -O - https://raw.githubusercontent.com/babim/doc
 WORKDIR /
 ENV NETDATA_PORT=19999 SSMTP_TLS=YES SSMTP_SERVER=smtp.gmail.com SSMTP_PORT=587 SSMTP_HOSTNAME=localhost
 EXPOSE $NETDATA_PORT
-VOLUME /etc/netdata/override
+VOLUME /etc/netdata
 
 # entry point
 ENTRYPOINT ["/docker-entrypoint.sh"]
