@@ -14,4 +14,4 @@ EXPOSE $NETDATA_PORT
 VOLUME /etc/netdata/override
 
 # entry point
-ENTRYPOINT ["//docker-entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
