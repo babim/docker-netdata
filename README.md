@@ -59,11 +59,9 @@ Alternatively, if you already have s msmtp config, you can use that config with:
 
 See the following link for details on setting up msmtp: [MSMTP - ArchWiki](https://wiki.archlinux.org/index.php/Msmtp)
 
-> Note: email settings up to version v0.10.0 were different. You can get the [old documentation](https://github.com/titpetric/netdata/blob/master/releases/v0.10.0/README.md) is the corresponding release subfolder.
-
 # Adding custom alarms, charts and configuration overrides
 
-To add custom alarms, charts or to override any default configuration file, mount a volume to the container to /etc/netdata/override, like `-v /opt/netdata/overrides:/etc/netdata/override`.  Then, place your config files in the directory as if it was /etc/netdata/.  
+To add custom alarms, charts or to override any default configuration file, mount a volume to the container to /etc/netdata, like `-v /opt/netdata:/etc/netdata`.  Then, place your config files in the directory as if it was /etc/netdata/.  
 
 For example to create a custom alarm for system temperature, create a `health.d` folder in your local directory (`/opt/netdata/override` in the example above) and place a `sensors.conf` file with your alarm configuration inside the `health.d` directory.
 
