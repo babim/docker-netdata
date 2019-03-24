@@ -1,7 +1,7 @@
 FROM babim/alpinebase
 
 # install
-RUN wget --no-check-certificate -O - https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20Netdata/netdata_install.sh | bash
+RUN wget --no-check-certificate -O - https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20Netdata%20install/netdata_install.sh | bash
 
 # environment
 WORKDIR /
