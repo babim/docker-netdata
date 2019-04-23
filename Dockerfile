@@ -1,8 +1,8 @@
 FROM babim/alpinebase
 
 # install
-RUN apk add --no-cache bash
-RUN wget --no-check-certificate -O - https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20Netdata%20install/netdata_install.sh | bash
+RUN apk add --no-cache bash curl
+RUN curl -s https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20Netdata%20install/netdata_install.sh | bash
 
 # environment
 WORKDIR /
