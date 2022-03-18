@@ -1,4 +1,4 @@
-FROM babim/alpinebase:3.14
+FROM babim/alpinebase:3.10
 
 # install
 RUN apk add --no-cache bash curl
